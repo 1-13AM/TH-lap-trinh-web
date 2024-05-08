@@ -45,7 +45,7 @@ const makeVideoCard = (data) => {
     videoCardContainer.innerHTML += `
     <div class="video-preview">
         <div class="thumbnail-row">
-            <a href="https://youtube.com/watch?v=${data.id}" target="_blank" class="video-title-link">
+            <a href="https://youtube.com/watch?v=${data.id}" target="_self" class="video-title-link">
                 <img class="thumbnail" src="${data.snippet.thumbnails.high.url}">
             </a>
             <div class="video-time">14:20</div>
@@ -53,7 +53,7 @@ const makeVideoCard = (data) => {
         <div class="video-info-grid" onclick="location.href = 'https://youtube.com/watch?v=${data.id}'">
             <div class="channel-picture">   
                 <div class="profile-picture-container">
-                    <a href="https://www.youtube.com/c/mkbhd" target="_blank" class="channel-link">
+                    <a href="https://www.youtube.com/c/mkbhd" target='_self' class="channel-link">
                         <img class="profile-picture" src="${data.channelThumbnail}">
                     </a>
                     <div class="channel-tooltip">
@@ -66,11 +66,11 @@ const makeVideoCard = (data) => {
                 </div>                                                                                  
             </div>
             <div class="video-info">
-                <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank" class="video-title-link">
+                <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target='_self' class="video-title-link">
                     <p class="video-title">${data.snippet.title}</p>
                 </a>
                 <div class="tooltip-hover">
-                    <a href="https://www.youtube.com/c/mkbhd" target="_blank" class="channel-link">
+                    <a href="https://www.youtube.com/c/mkbhd" target='_self' class="channel-link">
                         <p class="video-author">${data.snippet.channelTitle}</p>
                     </a>                            
                     <p class="video-stats">3.4M views &#183; 6 months ago</p>
